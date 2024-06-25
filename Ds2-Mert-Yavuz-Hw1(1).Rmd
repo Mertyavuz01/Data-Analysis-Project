@@ -1,13 +1,4 @@
----
-title: "HW 01 - All about Edinburgh"
-subtitle: "Due: 15 April, 23:59 TR time"
-output: 
-  tufte::tufte_html:
-    css: ../hw.css
-    tufte_variant: "envisioned"
-    highlight: pygments
-link-citations: yes
----
+
 
 ```{r setup, include=FALSE}
 library(tidyverse)
@@ -39,9 +30,7 @@ library(lubridate)
 ```
 
 
-- You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the **Run Current Chunk** icon (green arrow pointing right icon).
 
-Note that these packages are also get loaded in your R Markdown environment when you **Knit** your R Markdown document.
 
 # Airbnb listings in Edinburgh
 
@@ -87,7 +76,7 @@ council <- read_csv("council_assessments.csv")
 ```
 
 
-## Exercise 1 (15 pts)
+## Exercise 1 
 
 - In the `edibnb` data set, what is the ID of the listing that has the highest number of reviews with a perfect review score of 100%? 
 
@@ -95,7 +84,7 @@ council <- read_csv("council_assessments.csv")
 
 - Visualize the missing observations using some functions from visdat or naniar packages (Notes from Week 4 might be useful)
 
-✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document , knit the document, make sure that your added R code chunk works well and you did not face with any knitting problem*
+
 
 ```{r}
 
@@ -128,11 +117,11 @@ vis_miss(edibnb)  # Visualizing missing observations
 
 
 
-## Exercise 2 (15 pts)
+## Exercise 2 
 
 Calculate the minimum, maximum and average price from the Airbnb properties in Southside for a single night stay for four people (Try to use the `summarise` function).
 
-✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document , knit the document, make sure that your added R code chunk works well and you did not face with any knitting problem*
+
 
 ```{r}
 
@@ -159,7 +148,7 @@ price_summary
 
 ```
 
-## Exercise 3 (30 pts)
+## Exercise 3 
 
 When looking at the data you will notice that some of the listings have a value for the number of bathrooms that is not a whole number, e.g. 1.5 or 2.5. 
 
@@ -167,7 +156,7 @@ When looking at the data you will notice that some of the listings have a value 
 
 - Using this mutated variable, how many listings have more bathrooms than bedrooms?
 
-✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document , knit the document, make sure that your added R code chunk works well and you did not face with any knitting problem*
+
 
 ```{r}
 library(dplyr)
@@ -191,7 +180,7 @@ listings_with_more_bathrooms
 
 ```
 
-## Exercise 4 (40 pts)
+## Exercise 4 
 
 Join the `edibnb` to the `council` data frames. Create a bar plot of the `neighbourhood` variable for the properties that have been assessed by the council (remember to iterate the data visualization to make it as informative as possible). 
 
@@ -200,7 +189,7 @@ Join the `edibnb` to the `council` data frames. Create a bar plot of the `neighb
 - Is the council targeting all neighborhoods within Edinburgh equally?
 
 
-✏️️🧶 ✅ ⬆️ *Write your answer in your R Markdown document , knit the document, make sure that your added R code chunk works well and you did not face with any knitting problem*
+
 
 ```{r}
 
