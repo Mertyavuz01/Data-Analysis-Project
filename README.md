@@ -21,7 +21,7 @@ This assignment will use the following packages:
 -   `lubridate`: a package for formatting dates in R (in case if you need)
 
 We use the `library()` function to load packages.
-In your R Markdown document you should see an R chunk labelled `load-packages` which has the necessary code for loading both packages.
+
 
 ```{r load-packages}
 library(tidyverse)
